@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: awesome-media-backend-deployment
+  name: awesome-media-backend-deployment-v'${parameters.new_version}'
   namespace: '${parameters.namespace}'
   labels:
     app: awesome-media-backend
