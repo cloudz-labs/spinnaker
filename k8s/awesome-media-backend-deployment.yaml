@@ -2,6 +2,7 @@ apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: awesome-media-backend-deployment
+  namespace: ${parameters.namespace}
   labels:
     app: awesome-media-backend
 spec:
@@ -13,10 +14,11 @@ spec:
     metadata:
       labels:
         app: awesome-media-backend
+        version: v2
     spec:
       containers:
       - name: awesome-media-backend
-        image: iamsya1/awesome-media-backend:2.0
+        image: dtlabs/awesome-media-backend:2.0
         ports:
         - containerPort: 8090
         imagePullPolicy: Always
