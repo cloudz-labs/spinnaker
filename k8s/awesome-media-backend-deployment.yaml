@@ -14,11 +14,11 @@ spec:
     metadata:
       labels:
         app: awesome-media-backend
-        version: v2
+        version: ${parameters.version}
     spec:
       containers:
       - name: awesome-media-backend
-        image: dtlabs/awesome-media-backend:2.0
+        image: dtlabs/awesome-media-backend:${parameters.version}
         ports:
         - containerPort: 8090
         imagePullPolicy: Always
