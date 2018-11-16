@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: awesome-media-backend
-        image: dtlabs/awesome-media-backend:'${parameters.new_version}'
+        image: dtlabs/awesome-media-backend:${parameters.new_version}
         ports:
         - containerPort: 8090
         imagePullPolicy: Always
